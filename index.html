@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/script.js" defer></script>
+        <title>
+            Frontend Mentor | Newsletter sign-up form with success message
+        </title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <article class="card flex-col" id="mainCard">
+                <picture>
+                    <img
+                        src="./assets/images/illustration-sign-up-mobile.svg"
+                        alt="Illustration sign up"
+                        class="card__img"
+                    />
+                </picture>
+                <section class="card__description flex-col">
+                    <h2 class="card-title">Stay update!</h2>
+                    <p class="card-paragraph">
+                        Join 60,000+ product managers receiving monthly updates
+                        on:
+                    </p>
+                    <ul class="card__list flex-col">
+                        <li class="card__list-items">
+                            <img
+                                src="./assets/images/icon-list.svg"
+                                alt="Icon list"
+                                class="card__list-img"
+                            />
+                            <a href="" class="card__list-item"
+                                >Product discovery and building what matters</a
+                            >
+                        </li>
+                        <li class="card__list-items">
+                            <img
+                                src="./assets/images/icon-list.svg"
+                                alt="Icon list"
+                                class="card__list-img"
+                            />
+                            <a href="" class="card__list-item"
+                                >Measuring to ensure updates are a success</a
+                            >
+                        </li>
+                        <li class="card__list-items">
+                            <img
+                                src="./assets/images/icon-list.svg"
+                                alt="Icon list"
+                                class="card__list-img"
+                            />
+                            <a href="" class="card__list-item"
+                                >And much more!</a
+                            >
+                        </li>
+                    </ul>
+                    <form class="card__form flex-col" id="form">
+                        <label class="card__form-label">Email address</label>
+                        <input
+                            type="email"
+                            id="inputEmail"
+                            class="card__form-email"
+                            placeholder="email@company.com"
+                            autocomplete="off"
+                        />
+                        <input
+                            type="submit"
+                            value="Subscribe to monthly newsletter"
+                            class="card__button"
+                            id="submitButton"
+                        />
+                    </form>
+                </section>
+            </article>
+
+            <div class="container hidden-card" id="successCard">
+                <article class="card-success flex-col">
+                    <picture>
+                        <img
+                            src="./assets/images/icon-success.svg"
+                            alt="Success icon"
+                            class="card-success_img"
+                        />
+                    </picture>
+                    <section class="card-success__description flex-col">
+                        <h2 class="card-title">Thanks for subscribing!</h2>
+                        <p class="card-paragraph">
+                            A confirmation email has been sent to
+                            <span class="card-success__span"
+                                >ash@loremcompany.com</span
+                            >. Please open it and click the buttoninside to
+                            confirm your subscription.
+                        </p>
+                        <a
+                            href="#"
+                            class="card__button card__button--success"
+                            id="dismissButton"
+                            >Dismiss message</a
+                        >
+                    </section>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --tomato: hsl(4, 100%, 67%);   
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(233, 11%, 72%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-roboto: 'Roboto', sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-roboto);
+    color: var(--dark-slate-grey);
+    background-color: var(--dark-slate-grey);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* General styles */
+.wrapper {
+    width: 100%;
+    max-width: 24rem;
+    margin: auto;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card styles */
+.card {
+    gap: .8rem;
+    justify-content: center;
+
+    border-radius: 1.3rem;
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__description {
+    gap: 1.5rem;
+    
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 2.3rem;
+    font-weight: var(--fw-bold); 
+}
+
+.card-paragraph {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.card__list {
+    gap: .6rem;
+}
+
+.card__list-items {
+    display: flex;
+    gap: .4rem;
+}
+
+.card__list-img {
+    align-self: start;
+    width: 1.1rem;
+}
+
+.card__list-item {
+    font-size: .98rem;
+    color: var(--dark-slate-grey);
+}
+
+.card__form-label {
+    font-size: .82rem;
+    font-weight: var(--fw-bold);
+    margin: 0 0 .3rem 0;
+}
+
+.card__form-email {
+    font-family: var(--ff-roboto);
+    font-size: .92rem;
+    padding: .75rem;
+    border: 2px solid var(--grey);
+    border-radius: .5rem;
+    outline: none;
+    transition: border .1s ease-in;
+}
+
+.invalid-email {
+    border-color: var(--tomato);
+}
+
+.card__button {
+    font-family: var(--ff-roboto);
+    font-size: .95rem;
+    margin: 1.3rem 0 0 0;
+    padding: 1rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: var(--fw-bold);
+    border: none;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    opacity: .9;
+}
+
+.container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+.card-success {
+    gap: .9rem;
+    justify-content: center;
+    border-radius: 1rem;
+
+    padding: 1.5rem;
+    width: 99%;
+    max-width: 26rem;
+    margin: auto;
+    background-color: white;
+}
+
+.card-success__description {
+    gap: .4rem;
+}
+
+.card-success__span {
+    font-weight: var(--fw-bold);
+}
+
+.card__button--success {
+    text-align: center;
+}
+
+.hidden-card {
+    display: none;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        height: 100vh;
+    }
+
+    .wrapper {
+        max-width: 44rem;
+    }
+
+    .card {
+        gap: 1.5rem;
+        align-items: center;
+        flex-direction: row;
+
+        padding: 1.2rem
+    }
+
+    .card picture {
+        order: 1;
+    }
+    
+    .card__img {
+        content: url(../assets/images/illustration-sign-up-desktop.svg);
+    }
+
+    .card__description {
+        padding: 0;
+    }
+}
